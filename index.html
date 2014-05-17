@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+  
+  
+        <!-- Hammer reload -->
+          <script>
+            setInterval(function(){
+              try {
+                if(typeof ws != 'undefined' && ws.readyState == 1){return true;}
+                ws = new WebSocket('ws://'+(location.host || 'localhost').split(':')[0]+':35353')
+                ws.onopen = function(){ws.onclose = function(){document.location.reload()}}
+                ws.onmessage = function(){
+                  var links = document.getElementsByTagName('link'); 
+                    for (var i = 0; i < links.length;i++) { 
+                    var link = links[i]; 
+                    if (link.rel === 'stylesheet' && !link.href.match(/typekit/)) { 
+                      href = link.href.replace(/((&|\?)hammer=)[^&]+/,''); 
+                      link.href = href + (href.indexOf('?')>=0?'&':'?') + 'hammer='+(new Date().valueOf());
+                    }
+                  }
+                }
+              }catch(e){}
+            }, 1000)
+          </script>
+        <!-- /Hammer reload -->
+      
+  
+  <link rel='stylesheet' href='assets/css/normalize.css'>
+<link rel='stylesheet' href='assets/css/style.css'>
+  <script src='assets/js/jquery-1.8.3.min.js'></script>
+<script src='assets/js/app.js'></script>
+  
+  <link href="assets/favicon.ico" rel="shortcut icon">
+  <link href="assets/apple-touch-icon.png" rel="apple-touch-icon">
+  
+  <title>Four to Eight. Beautiful, simple dining.</title>
+  
+</head>
+
+<body>
+
+<div class="content">
+	<div class="fade">
+		<img class="logo" src="assets/4to8-logo.png">
+		<h1 class="opening">Opening summer 2014</h1>
+		<p class="info">Four to Eight is modern Italian dining featuring local and seasonal ingredients and a stunning wine list in London's Covent Garden.
+		</p>
+		<p>Submit your e-mail address to be kept up-to-date</p>
+		<!-- Begin MailChimp Signup Form -->
+<div id="mc_embed_signup">
+
+<form action="http://madebycinema.us8.list-manage.com/subscribe/post?u=0abaad90e70ac91151ebf5a8a&amp;id=536fa6c7b6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+	
+<div class="mc-field-group">
+	<input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email address">
+</div>
+
+	<div id="mce-responses" class="clear">
+		<div class="response" id="mce-error-response" style="display:none"></div>
+		<div class="response" id="mce-success-response" style="display:none"></div>
+	</div>
+
+    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+    
+    <div style="position: absolute; left: -5000px;"><input type="text" name="b_0abaad90e70ac91151ebf5a8a_536fa6c7b6" tabindex="-1" value=""></div>
+    
+    <div class="clear">
+	    <input type="submit" value="Submit" name="submit" id="mc-embedded-subscribe" class="button">
+	</div>
+
+</form>
+
+</div>
+
+<!--End mc_embed_signup-->
+	</div>	
+</div>
+  
+</body>
+
+</html>

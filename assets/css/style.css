@@ -1,0 +1,75 @@
+/* Write your CSS! */
+* {
+  box-sizing: border-box; }
+
+html {
+  height: 100%; }
+
+body {
+  background: url(../bg-wine.jpg) no-repeat top;
+  background-size: cover;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  color: #fff;
+  height: 100%;
+  font-weight: 200;
+  min-width: 960px; }
+  body:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+    /* Adjusts for spacing */ }
+
+img {
+  margin: 0 0 60px; }
+
+h1.opening {
+  font-size: 64px;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  font-weight: 100;
+  margin: 0 0 5px; }
+
+.content {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center; }
+  .content p.info {
+    max-width: 700px;
+    line-height: 1.6em;
+    margin: 0 auto 60px; }
+
+.validate {
+  margin: 0 auto;
+  display: table;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px; }
+  .validate .mc-field-group,
+  .validate .clear {
+    float: left; }
+    .validate .mc-field-group input,
+    .validate .clear input {
+      border: none;
+      -webkit-appearance: none;
+      padding: 20px 25px; }
+  .validate .mc-field-group input {
+    width: 500px;
+    border-radius: 5px 0 0 5px; }
+  .validate .clear input {
+    border-radius: 0 5px 5px 0;
+    color: #fff;
+    background: #373535;
+    width: 100px;
+    -webkit-transition: all, 0.5s;
+    -moz-transition: all, 0.5s;
+    transition: all, 0.5s; }
+    .validate .clear input:hover {
+      background: #2a2828; }
+
+.fade {
+  display: none; }
